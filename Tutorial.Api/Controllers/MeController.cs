@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-
 namespace Tutorial.Api.Controllers
 {
     [Route("/")]
@@ -26,7 +25,6 @@ namespace Tutorial.Api.Controllers
             return new ContentResult{
                 ContentType = "text/html",
                 Content = await HttpRequestAsync("https://raw.githubusercontent.com/chakkrid/leng.github.io/main/index.html") + " <b>Dotnet Tutorial Backend v0.0.2</b>"
-#                Content = await HttpRequestAsync("") + " <b>Dotnet Tutorial Backend v0.0.1</b>"
             };
         }   
 
